@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title></title>
+    <description>A blog by Nathan Englert.</description>
+    <link>http://nathanenglert.com//</link>
+    <atom:link href="http://nathanenglert.com//feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 10 Dec 2017 19:07:57 -0600</pubDate>
+    <lastBuildDate>Sun, 10 Dec 2017 19:07:57 -0600</lastBuildDate>
+    <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>Self confidence</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;Whether you think you can, or you think you can’t – you’re right.
+&lt;br /&gt;
+– &lt;cite&gt;Henry Ford&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        <pubDate>Sat, 08 Oct 2016 08:48:00 -0500</pubDate>
+        <link>http://nathanenglert.com//2016/10/08/self-confidence/</link>
+        <guid isPermaLink="true">http://nathanenglert.com//2016/10/08/self-confidence/</guid>
+        
+        
+        <category>Inspiration</category>
+        
+      </item>
+    
+      <item>
+        <title>I built some things</title>
+        <description>&lt;p&gt;Over the past couple of weeks, I’ve ran into some problems that I couldn’t solve with a Google search. Like any nerd would do, I decided to solve them myself with some javascript instead.&lt;/p&gt;
+
+&lt;p&gt;I threw the two starter apps up on a new page I’ll use to &lt;a href=&quot;/apps&quot;&gt;display my work&lt;/a&gt;. Check them out and let me know what you think. One is a &lt;a href=&quot;/apps/raffler&quot;&gt;raffle simulator&lt;/a&gt; and the other is a &lt;a href=&quot;/apps/kaslo&quot;&gt;better student loan calculator&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 01 Oct 2016 10:01:00 -0500</pubDate>
+        <link>http://nathanenglert.com//2016/10/01/i-built-some-things/</link>
+        <guid isPermaLink="true">http://nathanenglert.com//2016/10/01/i-built-some-things/</guid>
+        
+        
+        <category>Notes</category>
+        
+      </item>
+    
+      <item>
+        <title>Lemons</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;When life gives you lemons, just say fuck the lemons and bail.
+&lt;br /&gt;
+– &lt;cite&gt;Surfing Instructor in Forgetting Sarah Marshall&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        <pubDate>Wed, 21 Sep 2016 01:55:00 -0500</pubDate>
+        <link>http://nathanenglert.com//2016/09/21/lemons/</link>
+        <guid isPermaLink="true">http://nathanenglert.com//2016/09/21/lemons/</guid>
+        
+        
+        <category>Inspiration</category>
+        
+      </item>
+    
+      <item>
+        <title>How to compile C# without Visual Studio</title>
+        <description>&lt;p&gt;&lt;em&gt;Yesterday I found myself in a bind, I needed to fix a bug for a client and Visual Studio was having a moment (and still is actually). I’ve been using the Visual Studio Community Edition for a bit now and it’s been working great. However, yesterday it decided to expire my “trial period” and would fail when attempting to renew my license. Awesome.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;After hours of uninstalling / reinstalling / hoping / praying, I still hadn’t gotten anywhere and needed to push this hotfix out. Have you ever been in this situation? Just then, I had the brightest of ideas, why not fix the code in notepad, compile it via the command line, and push it out while hoping for the best? Brilliant!&lt;/p&gt;
+
+&lt;p&gt;Here’s how you can compile a solution without opening Visual Studio. The first thing you’ll want to do is navigate to the .NET Framework folder that your solution is using. For example,&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-batch&quot; data-lang=&quot;batch&quot;&gt;&lt;span&gt;&lt;/span&gt;C&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;\Windows\Microsoft.NET\Framework\v4.0.30319&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Then, run this command to build it!&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-batch&quot; data-lang=&quot;batch&quot;&gt;&lt;span&gt;&lt;/span&gt;msbuild &lt;span class=&quot;s2&quot;&gt;&amp;quot;C:\path\to\your\awesome\solution.sln&amp;quot;&lt;/span&gt; /t:Rebuild /p:Configuration=Release /p:Platform=&lt;span class=&quot;s2&quot;&gt;&amp;quot;Any CPU&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;p.s. I don’t recommend “shooting from the hip” in this fashion and throwing untested code out to production.. buuttt, when you’re in a jam.. :)&lt;/p&gt;
+</description>
+        <pubDate>Tue, 09 Jun 2015 01:55:00 -0500</pubDate>
+        <link>http://nathanenglert.com//2015/06/09/how-to-compile-c-without-visual-studio/</link>
+        <guid isPermaLink="true">http://nathanenglert.com//2015/06/09/how-to-compile-c-without-visual-studio/</guid>
+        
+        
+        <category>Programming</category>
+        
+      </item>
+    
+      <item>
+        <title>How to use C# to find domains</title>
+        <description>&lt;p&gt;&lt;em&gt;Recently I was searching for domain names out on the interwebs and realized there was no good way (I could find) to search for possible domain names in bulk. For example, I wanted to type in “nathan” into some awesome app and have it tell me all of the domain extensions (TLDs) that were available for purchase. So, I threw together a C# app just for that purpose and wanted to share the process here.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;step-1&quot;&gt;Step 1&lt;/h4&gt;
+
+&lt;p&gt;In order to check for a domain’s availability, we’ll need to make two calls out to the internet. First, we’ll want to grab the whois server that is used with the TLD you’re searching for (.com, .coffee, .etc). This server is responsible for telling us who, if anyone, has the domain name registered. After we retrieve the whois server to use, we’ll make a second call out to that server to check for registration on the domain we’re searching for.&lt;/p&gt;
+
+&lt;p&gt;Now, for some code. The first thing we’re going to do is create a method that will make a request out to our whois server and return the result.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c#&quot; data-lang=&quot;c#&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;GetWhoisInformation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;whoisServer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;StringBuilder&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ret&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StringBuilder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TcpClient&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;whoisClient&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TcpClient&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;whoisServer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;43&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NetworkStream&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;networkStream&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;whoisClient&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GetStream&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;BufferedStream&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bufferedStream&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BufferedStream&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;networkStream&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;StreamWriter&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;streamWriter&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StreamWriter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bufferedStream&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;streamWriter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WriteLine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;streamWriter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Flush&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+        &lt;span class=&quot;n&quot;&gt;StreamReader&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;streamReader&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StreamReader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bufferedStream&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;streamReader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;EndOfStream&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;ret&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;AppendLine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;streamReader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ReadLine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ret&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ToString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The main takeaway from this method is that we’re going to open a TCP connection to our whois server, request information about our query, and then read the results back.&lt;/p&gt;
+
+&lt;h4 id=&quot;step-2&quot;&gt;Step 2&lt;/h4&gt;
+
+&lt;p&gt;Now that the core method is set up, we’ll want to stash the root whois server in a variable. This server will be the one responsible for telling us which whois server we should use to check for the domain itself.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c#&quot; data-lang=&quot;c#&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;RootTLDServerURL&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;@&amp;quot;whois.iana.org&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h4 id=&quot;step-3&quot;&gt;Step 3&lt;/h4&gt;
+
+&lt;p&gt;Next, we’ll set up our initial method that we can call to check for a domain names’ availability. This method will take two parameters: a keyword and a TLD.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c#&quot; data-lang=&quot;c#&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;IsAvailable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;keyword&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tld&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h4 id=&quot;step-4&quot;&gt;Step 4&lt;/h4&gt;
+
+&lt;p&gt;As stated above, the first thing we need to do is retrieve the whois server that is associated with the TLD that we are searching for. Add the following code into our IsAvailable method:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c#&quot; data-lang=&quot;c#&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;// Search IANA to find the whois server for the given TLD&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;whoisForRoot&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;GetWhoisInformation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RootTLDServerURL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tld&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;whoisForRoot&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;whoisForRoot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Remove&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;whoisForRoot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;IndexOf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;whois:&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StringComparison&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Ordinal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TrimStart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;If we were to query our root whois server with .coffee, the results would look like this:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&lt;/span&gt;whois.donuts.co
+
+status:       ACTIVE
+remarks:      Registration information: http://donuts.co
+
+created:      &lt;span class=&quot;m&quot;&gt;2013&lt;/span&gt;-12-19
+changed:      &lt;span class=&quot;m&quot;&gt;2013&lt;/span&gt;-12-28
+source:       IANA&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;If you look back at the code we have, the only thing we care about is that first line. This is the whois server URL that we are going to want for our next call.&lt;/p&gt;
+
+&lt;h4 id=&quot;step-5&quot;&gt;Step 5&lt;/h4&gt;
+
+&lt;p&gt;Next, we’re going to make a call out to the whois server retrieved above and check for a registration for the domain we’re trying to check. Add this code into our IsAvailable method to do so:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c#&quot; data-lang=&quot;c#&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;// Search the resulting whois server to check domain availability&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tldServer&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;whoisForRoot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Substring&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;whoisForRoot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;IndexOf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sc&quot;&gt;&amp;#39;\r&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;    
+&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;domain&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;{0}.{1}&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;keyword&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tld&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;whois&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;GetWhoisInformation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tldServer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;domain&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now, if we were to query for nathanloves.coffee, we would get some results back that look like this (at the time of writing):&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&lt;/span&gt;Domain not found.
+
+Terms of Use: Users accessing the Donuts WHOIS service must agree to use the data only &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; lawful purposes, and under under no circumstances use the data to: Allow, enable, or otherwise support the transmission by e-mail, telephone, or facsimile of mass unsolicited, commercial advertising or solicitations to entities other than the registrar&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;s own existing customers. Enable high volume, automated, electronic processes that send queries or data to the systems of Donuts or any ICANN-accredited registrar, except as reasonably necessary to register domain names or modify existing registrations. When using the Donuts Whois service, please consider the following: The Whois service is not a replacement &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; standard EPP commands to the SRS service. Whois is not considered authoritative &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; registered domain objects. The Whois service may be scheduled &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; downtime during production or OT&lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;E maintenance periods. Queries to the Whois services are throttled. If too many queries are received from a single IP address within a specified time, the service will begin to reject further queries &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; a period of &lt;span class=&quot;nb&quot;&gt;time&lt;/span&gt; to prevent disruption of Whois service access.
+Perfect! That’s exactly what we want to see. On the other hand, &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; the domain is registered, you would be looking at a whole bunch of registration information, such as the administrative contact, the technical contact, and so on.&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h4 id=&quot;youre-done&quot;&gt;You’re done!&lt;/h4&gt;
+
+&lt;p&gt;Throwing this all together, we end up with this:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c#&quot; data-lang=&quot;c#&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;IsAvailable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;keyword&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tld&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// Search IANA to find the whois server for the given TLD&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;whoisForRoot&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;GetWhoisInformation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RootTLDServerURL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tld&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;whoisForRoot&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;whoisForRoot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Remove&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;whoisForRoot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;IndexOf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;whois:&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StringComparison&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Ordinal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TrimStart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// Search the resulting whois server to check domain availability&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tldServer&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;whoisForRoot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Substring&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;whoisForRoot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;IndexOf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sc&quot;&gt;&amp;#39;\r&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;domain&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;{0}.{1}&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;keyword&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tld&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;whois&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;GetWhoisInformation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tldServer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;domain&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;whois&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Contains&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Domain not found&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;whois&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Contains&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;No match for&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Pretty easy right? Now to use this, all you have to do is call it like so:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c#&quot; data-lang=&quot;c#&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IsAvailable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;nathanloves&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;coffee&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+</description>
+        <pubDate>Mon, 25 May 2015 05:02:00 -0500</pubDate>
+        <link>http://nathanenglert.com//2015/05/25/creating-an-app-to-find-that-domain-youve-always-wanted/</link>
+        <guid isPermaLink="true">http://nathanenglert.com//2015/05/25/creating-an-app-to-find-that-domain-youve-always-wanted/</guid>
+        
+        
+        <category>Programming</category>
+        
+      </item>
+    
+      <item>
+        <title>Why your data is going to get hacked</title>
+        <description>&lt;p&gt;&lt;em&gt;Are you still using words from a dictionary, numbers in a sequence, or a pattern of letters as your password? If not, good, that’s step one. Now, how many times have you re-used your passwords over and over online? Even if you have a group of super-awesome passwords that you used again and again, eventually they will get hacked on some random site that you joined just to see a few cat pictures.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Fact is, there are a ton of sites out there whose number one priority isn’t security. Start-up companies are quick to get their products online, but push off securing their customers’ data as the next objective. Even established companies like Adobe, Yahoo, and Forbes have all been hacked recently with usernames and passwords spilling out online for the world to see. If you haven’t taken steps to protect yourself, you should start thinking about it now.&lt;/p&gt;
+
+&lt;p&gt;Not only do we need to have complex passwords to ensure our online safety, we need to create and use new ones for every site we join. Seems like a lot of work, right? I know my memory isn’t that good. Don’t worry, there is a light at the end of the tunnel. It’s called Dashlane. Dashlane is a password manager that generates a strong, complex password for you each time you sign up on a new site. Forget spending time thinking of a good password that relates to the site you’re on, let Dashlane do that for you. If that doesn’t tickle your fancy, it also syncs to the cloud so you can get access to those passwords at home, work, or on your phone.&lt;/p&gt;
+
+&lt;p&gt;“Whoa, whoa, whoa…slow down now, isn’t cloud syncing a bit insecure?” I thought the same thing when I first heard about it. Let me break down their process for you and you can decide. First, they use AES-256 encryption to encrypt all the data you enter into Dashlane. Why is that important to know? AES-256 remains uncracked to this day and is regarded as the strongest encryption algorithm there is. Furthermore, the key to decrypt this data is derived only from your master password. Dashlane does not store this key anywhere, not on your device, your PC, or their servers. This key is derived from your master password and then thrown away, and it prompts you the next time it is needed. For more information on their security measures, including some optional settings for the paranoid among us, check out their page on security.&lt;/p&gt;
+
+&lt;p&gt;Using a password manager like Dashlane helps me breathe a little easier, I’m not kidding. If your password gets stolen, it’s not a big deal anymore. You know it was only used on one site – the one that got hacked. This means that the hacker isn’t tweeting rude obscenities, ruining Grandma’s evening on Facebook, or siphoning all your money from your bank account. At least not all at the same time. All you need to do is log into that one site, have Dashlane generate you a new password, and off you go.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 22 May 2015 06:55:00 -0500</pubDate>
+        <link>http://nathanenglert.com//2015/05/22/why-your-data-is-going-to-get-hacked/</link>
+        <guid isPermaLink="true">http://nathanenglert.com//2015/05/22/why-your-data-is-going-to-get-hacked/</guid>
+        
+        
+        <category>Lifehacks</category>
+        
+      </item>
+    
+      <item>
+        <title>Hello world!</title>
+        <description>&lt;p&gt;Hey everyone!&lt;/p&gt;
+
+&lt;p&gt;This is going to be the home of my new blog.  I’m going to be writing about technology, startups, trends, productivity, lifehacking, and more..  Stick around and maybe we can both learn something.
+&lt;!--excerpt--&gt;&lt;/p&gt;
+</description>
+        <pubDate>Thu, 14 May 2015 02:10:00 -0500</pubDate>
+        <link>http://nathanenglert.com//2015/05/14/hello-world/</link>
+        <guid isPermaLink="true">http://nathanenglert.com//2015/05/14/hello-world/</guid>
+        
+        
+        <category>Notes</category>
+        
+      </item>
+    
+  </channel>
+</rss>

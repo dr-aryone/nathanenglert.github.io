@@ -1,0 +1,119 @@
+﻿body {
+    padding-top: 40px;
+}
+
+h1,
+.winner-name {
+    font-family: 'Sriracha', cursive;
+}
+
+.raffle-content {
+    text-align: center;
+}
+
+.raffle-content ul,
+.raffle-content li{
+    margin-bottom: 0;
+}
+
+.raffle-content li {
+    list-style:none;
+    position: relative;
+}
+
+.raffle-content .raffle-name {
+    width: 230px;
+}
+
+.raffle-content .raffle-amount {
+    margin-right: 8px;
+    width: 80px;
+}
+
+.raffle-winner,
+.raffle-alert{
+    background: #eee;
+    border-radius: 4px;
+    margin: 20px auto;
+    max-width:310px;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.raffle-remove{
+    color: #888;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    margin-right: -25px;
+    text-decoration: none;
+}
+
+.caption {
+    color: #888;
+}
+
+.alert-text {
+    margin: 0 20px;
+}
+
+.winner-name {
+    font-size: 22px;
+}
+
+.donation-text {
+    color: #aaa;
+}
+
+.donation-wrapper.left {
+    float: left;
+    margin-right: 8px;
+}
+
+.donation-wrapper button,
+.donation-wrapper .button {
+    height: 30px;
+    line-height: 30px;
+    padding: 0 22px;
+}
+
+footer {
+    border-top: #EBF2F6 1px solid;
+    margin-top: 8rem;
+    padding: 0 0 2.5rem 0;
+}
+
+.footer-logo,
+.footer-links {
+    padding: 2.5rem 0 0 0;
+}
+
+.footer-logo a {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.footer-links {
+    text-align: right;
+}
+
+.footer-links a {
+    display: inline-block;
+    margin-left: 2rem;
+    text-decoration: none;
+}
+
+@media (max-width: 550px) {
+    .donation-wrapper {
+        text-align:center;
+    }
+    
+    .footer-links {
+        text-align: left;
+    }
+
+    .footer-links a {
+        margin-left: 0;
+        margin-right: 2rem;
+    }
+}

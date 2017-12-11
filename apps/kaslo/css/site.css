@@ -1,0 +1,90 @@
+﻿body {
+    padding-top: 40px;
+}
+
+td {
+    position:relative;
+}
+
+td input {
+    margin: 0;
+    width: 100% !important;
+}
+
+tr td:not(:first-child) {
+    text-align: right;
+}
+
+.headline {
+    font-family: 'Bangers', cursive;
+}
+
+.money-text {
+    text-align: right;
+    width: 80px;
+}
+
+.label-inline {
+    display: inline-block;
+    margin-right: 16px;
+}
+
+.remove-loan {
+    font-size:1.5em;
+    font-weight:bold;
+    position:absolute;
+    right:-30px;
+    text-decoration: none;
+    top:15px;
+}
+
+.add-loan{
+    margin-right:12px;
+}
+
+.results-container,
+footer {
+    margin-top: 8rem;
+}
+
+.results-container {
+    border: #DDD 1px solid;
+    border-radius: 4px;
+    padding: 4rem 6rem;
+}
+
+footer {
+    border-top: #EBF2F6 1px solid;
+    padding: 0 0 2.5rem 0;
+}
+
+.footer-logo,
+.footer-links {
+    padding: 2.5rem 0 0 0;
+}
+
+.footer-logo a {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.footer-links {
+    text-align: right;
+}
+
+.footer-links a {
+    display: inline-block;
+    margin-left: 2rem;
+    text-decoration: none;
+}
+
+@media (max-width: 550px) {
+    .footer-links {
+        text-align: left;
+    }
+
+    .footer-links a {
+        margin-left: 0;
+        margin-right: 2rem;
+    }
+}

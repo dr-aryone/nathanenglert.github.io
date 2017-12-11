@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kick-Ass Student Loan Obliterator</title>
+    <meta name="description" content="The KASLO is a student loan calculator created to show you the power of rolling payments together." />
+    <meta name="keywords" content="student loan, student loan calculator, kick-ass student loan obliterator, kaslo" />
+
+    <link href="https://fonts.googleapis.com/css?family=Itim|Sriracha" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/skeleton/normalize.css" />
+    <link type="text/css" rel="stylesheet" href="css/skeleton/skeleton.css" />
+    <link type="text/css" rel="stylesheet" href="css/site.css" />
+    <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="twelve columns">
+                <h2 class="headline">Kick-Ass Student Loan Obliterator!</h2>
+                <p>
+                    We're lazy people. Once we set up automatic payments, we forget about these loans. And most of the time,
+                    we're only paying the minimum each month too. The goal of the KASLO is to give you a plan of attack. By
+                    paying off the smallest loan quickly and rolling the payment into the next smallest loan, you can cut your
+                    payment time in half and save thousands of dollars. Why? Because interest is a bitch.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="twelve columns">
+                <table class="u-full-width">
+                    <thead>
+                        <tr>
+                            <th style="width:200px;">Name</th>
+                            <th>Loan Amount</th>
+                            <th>Loan Term</th>
+                            <th>Interest Rate</th>
+                            <th>Monthly Payment</th>
+                            <th>Amount Left</th>
+                        </tr>
+                    </thead>
+                    <tbody data-bind="foreach: loans">
+                        <tr>
+                            <td><input type="text" placeholder="ABC" data-bind="value: name" /></td>
+                            <td><input type="number" class="money-text" placeholder="10000" data-bind="value: initialBalance" /></td>
+                            <td><input type="number" class="money-text" placeholder="120" data-bind="value: repaymentTerm" /></td>
+                            <td><input type="number" class="money-text" placeholder="6.55" data-bind="value: interestRate" /></td>
+                            <td><input type="number" class="money-text" placeholder="75.00" data-bind="value: minimumPayment" /></td>
+                            <td>
+                                <input type="number" class="money-text" placeholder="6000" data-bind="value: amountLeft" />
+                                <a href="#" class="remove-loan" data-bind="click: $root.removeLoan">&times;</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <label class="label-inline" for="extra-money">How much extra money could you put towards these loans each month?</label>
+                <input type="text" id="extra-money" class="money-text" data-bind="value: extraMoney"/>
+                <button type="button" class="u-pull-right button-primary" data-bind="click: analyzeLoans">Analyze</button>
+                <button type="button" class="u-pull-right button add-loan" data-bind="click: addLoan">Add Loan</button>
+            </div>
+            <div class="results-container ten columns offset-by-one" data-bind="visible: hasResults">
+                <h4 class="headline">Your personalized plan to kicking ass</h4>
+                <ol data-bind="foreach: results">
+                    <li>
+                        <p>
+                            <!-- ko html: friendlyText --><!-- /ko -->
+                            &nbsp;(<a href="#" data-bind="click: $root.toggleStats">details</a>)
+                        </p>
+                        <ul class="stats" data-bind="visible: statsOpened">
+                            <li>Total time to pay-off: <span data-bind="text: paidOff"></span> months vs. <span data-bind="text: oldPaidOff"></span> months</li>
+                            <li>Savings: <span data-bind="money: (oldTotalInterest - totalInterest)"></span></li>
+                        </ul>
+                    </li>
+                </ol>
+                <p>
+                    In the end, you will have shaved off <strong data-bind="text: deltaMonths() + ' months'"></strong> and saved yourself <strong data-bind="money: deltaInterest"></strong>!
+                </p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="footer-logo six columns">
+                    Built by <a href="http://nathanenglert.com">Nathan Englert</a>
+                </div>
+                <div class="footer-links six columns">
+                    <a href="http://twitter.com/nathanenglert">@nathanenglert</a>
+                    <a href="http://nathanenglert.com/about">about</a>
+                    <a href="http://nathanenglert.com/contact">say hello</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-4669276-2', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script type="application/javascript" src="js/knockout/knockout-3.4.0.js"></script>
+    <script type="application/javascript" src="js/ko-money.js" ></script>
+    <script type="application/javascript" src="js/ko-html.js" ></script>
+    <script type="application/javascript" src="js/calc.js" ></script>
+    <script type="application/javascript" src="js/app.js" ></script>
+</body>
+</html>

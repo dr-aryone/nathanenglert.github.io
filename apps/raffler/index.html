@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raffler</title>
+    <meta name="description" content="Raffle" />
+    <meta name="keywords" content="raffle, raffle simulator" />
+
+    <link href="https://fonts.googleapis.com/css?family=Itim|Sriracha" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/skeleton/normalize.css" />
+    <link type="text/css" rel="stylesheet" href="css/skeleton/skeleton.css" />
+    <link type="text/css" rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="twelve columns">
+                <h1>Raffler!</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="six columns">
+                <h4>How it works</h4>
+                <p>
+                    Raffler can be used to simulate any raffle or sweepstakes drawing. It's as easy as entering the
+                    contestants, setting the amount of tickets purchased, and clicking <strong>Pick a Winner</strong>!
+                </p>
+                <p>
+                    Our system uses <a href="https://en.wikipedia.org/wiki/Pseudo-random_number_sampling" target="_blank">non-uniform distribution</a>
+                    in order to pick the winner. What this means to you is, the higher the amount of tickets are for a
+                    contestant, the higher their chances are of winning!
+                </p>
+                <p class="donation-text">
+                    P.S.<br/>
+                    I hate ads and I know you do too.. Instead, if you have a dollar or two laying around, I'd appreciate the donation to keep this site online!
+                </p>
+                <p class="donation-wrapper left" data-accepton-button="">
+                    <button type="submit" class="accepton-button-submit"><span>Donate!</span></button>
+                    <script src="https://js.accepton.com/scripts/accepton.js" 
+                        class="accepton-button active" 
+                        data-public-key="pkey_11863a5c8fb38119" 
+                        data-redirect-uri="" 
+                        data-token="txn_ff6ddf9555e90bed81909037caa63353" 
+                        data-additional-fields="" 
+                        data-customer-email-required="" 
+                        data-customer-email="" 
+                        data-accepton-active="">
+                    </script>                    
+                </p>         
+                <p class="donation-wrapper">
+                    <a class="button" href="https://paypal.me/nathanenglert" target="_blank">Donate with PayPal!</a>
+                </p>
+                <!--<p>
+                    Once a winner is picked, their winning ticket will be excluded from the next round. Raffler was built
+                    to keep the results simple and fair across the board. If you need to simulate multiple rounds of winners,
+                    all you need to do is keep clicking that button!
+                </p>-->
+            </div>
+            <div class="six columns raffle-content">
+
+				<ul data-bind="foreach: rafflers">
+					<li>
+                        <div>
+                            <input type="text" class="raffle-name" placeholder="Person's Name" data-bind="value: name" />
+                            <input type="number" class="raffle-amount" placeholder="Amount" data-bind="value: amount, event: { keydown: $root.onTabOutOfAmount }" />
+                            <a href="#" class="raffle-remove" tabindex="-1" data-bind="click: $root.removeRaffler">&times;</a>
+                        </div>
+                    </li>
+				</ul>
+                <div class="raffle-actions">
+                    <button type="button" data-bind="click: addRaffler">Add person</button>
+                    <button type="button" class="button-primary" data-bind="click: pickWinner">Pick a winner</button>
+                </div>
+                <div class="raffle-winner" data-bind="visible: hasWinner">
+                    <span class="caption">And the winner is..</span><br>
+                    <strong class="winner-name" data-bind="text: winner"></strong>
+                </div>
+                <div class="raffle-alert" data-bind="visible: hasAlert">
+                    <span class="caption">Whoops..</span><br>
+                    <strong class="alert-text" data-bind="text: alert"></strong>
+                </div>
+				
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="footer-logo six columns">
+                    Built by <a href="http://nathanenglert.com">Nathan Englert</a>
+                </div>
+                <div class="footer-links six columns">
+                    <a href="http://twitter.com/nathanenglert">@nathanenglert</a>
+                    <a href="http://nathanenglert.com/about">about</a>
+                    <a href="http://nathanenglert.com/contact">say hello</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-4669276-2', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script type="application/javascript" src="js/knockout/knockout-3.4.0.js"></script>
+    <script type="application/javascript" src="js/app.js" ></script>
+</body>
+</html>
