@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Customizer</title>
+    <meta name="description" content="Customizer">
+    <meta name="author" content="Nathan Englert">
+
+    <link rel="stylesheet" href="css/styles.css?v=1.0">
+</head>
+
+<body>
+    <div id="app">
+        <div id="components-wrapper">
+            <ul id="components">
+                <component-item 
+                    v-for="component in components" 
+                    v-bind:key="component.id"
+                    v-bind:model="component"
+                    v-bind:class="{'active': component.active}"
+                    v-on:select="onComponentSelect">
+                </component-item>
+            </ul>
+        </div>        
+
+        <preview
+            v-bind:views="views">
+        </preview>
+    </div>    
+
+    <div class="work-in-progress">work in progress</div>
+    
+    <script type="text/x-template" id="template-color-picker">
+        <div class='color-picker'>
+            <div v-for="(color, i) in colors"
+                v-bind:key="i"
+                v-bind:class="[{'active':color.active}, 'option']" 
+                v-bind:style="{'background-color':color.hex}"
+                v-on:click="select(i)">
+            </div>            
+        </div>
+    </script>
+
+    <script type="text/x-template" id="template-component-item">
+        <li>
+            <div class="component-title" v-on:click="select()">
+                {{ model.name }}
+            </div>
+            <div class="component-options">
+                <color-picker 
+                    v-bind:part="model"
+                    v-bind:colors="model.colors">
+                </color-picker>
+                <div class="text-input" v-show="model.personalizationType === 'text'">
+                    <span>Text</span>
+                    <input type="text" v-model="personalizationText" />
+                </div>
+            </div>                    
+        </li>
+    </script>
+
+    <script type="text/x-template" id="template-preview-image">
+        <div 
+            v-show="model.active"
+            class="preview-view">
+            <object 
+                v-bind:id="selectorId"
+                v-bind:data="imagePath"                
+                type="image/svg+xml">
+            </object>
+            <div
+                v-bind:style="{'color':model.backNumbersColor}"
+                v-show="model.backNumbersShow" 
+                class="personalization-numbers">
+                {{model.backNumbersText}}
+            </div>
+            <div
+                v-bind:style="{'color':model.backNameColor}"
+                v-show="model.backNameShow" 
+                class="personalization-nameplate">
+                {{model.backNameText}}
+            </div>
+        </div>
+    </script>
+
+    <script type="text/x-template" id="template-preview">
+        <div id="preview">
+            <div id="preview-views">
+                <preview-image
+                    v-for="view in views"
+                    v-bind:key="view.id"
+                    v-bind:model="view">
+                </preview-image>                
+            </div>
+            <div id="view-switcher">
+                <button
+                    v-for="view in views"
+                    v-on:click="updateView(view.id)">
+                    {{ view.name }}
+                </button>
+            </div>            
+        </div>    
+    </script>
+
+    <script src="js/vendor/vue.js"></script>
+    <script src="js/productService.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
