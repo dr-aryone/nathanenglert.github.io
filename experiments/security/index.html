@@ -14,8 +14,31 @@
 <body>
   <div class="container">
     <div id="video-feed"></div>
-    <div class="overlay">AV-1</div>
+    <div class="overlay top-left"><span class="dot"></span>&nbsp;REC</div>
+    <div id="current-time" class="overlay top-right">&nbsp;</div>
+    <div id="current-date" class="overlay bottom-left">&nbsp;</div>
+    <div class="overlay bottom-right">CAMERA 2</div>
   </div>
-</body>
 
+  <script type="text/javascript">
+    var currentDate$ = document.getElementById("current-date");
+    var currentTime$ = document.getElementById("current-time");
+
+    function updateDate() {
+      var d = new Date();
+      var ampm = 'AM';
+      var hours = d.getHours();
+
+      if (hours > 12) {
+        ampm = 'PM';
+        hours -= 12;
+      }
+
+      currentDate$.innerText = `${(d.getMonth()+1).toString().padStart(2, '0')}/${d.getDay().toString().padStart(2, '0')}/${d.getFullYear().toString().substring(2)}`;
+      currentTime$.innerText = `${hours.toString().padStart(2, '0')}:${d.getMinutes().toString().padStart(2, '0')}:${d.getSeconds().toString().padStart(2, '0')} ${ampm}`;
+    }
+
+    setInterval(updateDate, 1000);
+  </script>
+</body>
 </html>
